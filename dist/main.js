@@ -20,8 +20,9 @@ const alunos = [{
   nome: 'Aluno 7',
   nota: 7
 }];
-const filtraAlunosAprovados = alunos => alunos.nota >= 7;
+const notaDeCorte = 6;
+const filtraAlunosAprovados = alunos => alunos.nota >= notaDeCorte;
 const alunosAprovados = alunos.filter(filtraAlunosAprovados);
 alunosAprovados.forEach(function (nomeDoAluno) {
-  console.log(`O ${nomeDoAluno.nome} foi aprovado com a nota igual ou maior que 7`);
+  console.log(`O ${nomeDoAluno.nome} foi aprovado com a nota igual ou maior que ${notaDeCorte}`);
 });
